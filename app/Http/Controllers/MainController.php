@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\ContactModel;
 use Illuminate\Http\Request;
 
 
@@ -18,9 +19,20 @@ class MainController extends Controller
     }
     public function review_check(Request $request) {
         $valid = $request->validate([
-            'email' => 'required|min:5|max:100',
-            'subject' => 'required|min:5|max:100',
-            'messagee' => 'required|min:15|max:500'
+            'email' => 'required|max:100',
+            'subject' => 'required|max:100',
+            'message' => 'required|max:500'
         ]);
+
+        $review = new ContactModel();
+        $review->email = $request->input('email');
+        $review->subject = $request->input('subject');
+        $review->message = $request->input('message');
+
+        $review->save();
+
+        return redirect()->route('review');
+
+        
     }
 }
