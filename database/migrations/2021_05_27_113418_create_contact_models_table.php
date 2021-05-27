@@ -15,6 +15,9 @@ class CreateContactModelsTable extends Migration
     {
         Schema::create('contact_models', function (Blueprint $table) {
             $table->id();
+            $table->string('email');
+            $table->string('subject');
+            $table->text('message');
             $table->timestamps();
         });
     }
