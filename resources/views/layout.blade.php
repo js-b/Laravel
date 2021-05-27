@@ -20,8 +20,6 @@
           <li><a href="/" class="nav-link px-2 text-secondary"> Главная</a></li>
           <li><a href="/review" class="nav-link px-2 text-white">Отзывы</a></li>
           <li><a href="/about" class="nav-link px-2 text-white">Про нас</a></li>
-          <li><a href="#" class="nav-link px-2 text-white">FAQs</a></li>
-          <li><a href="#" class="nav-link px-2 text-white">About</a></li>
         </ul>
 
         <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3">

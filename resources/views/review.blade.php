@@ -23,6 +23,15 @@
         <button type="submit" class="btn btn-success ">Отправить</button>
     
     </form>
+
+    <h1>Отзовы</h1>
+    @foreach($reviews as $el)
+        <div class="alert alert-warning">
+            <h3>{{ $el->subject }}</h3>
+            <b>{{ $el->email }}</b> <br>
+            <b>{{ $el->message }}</b>
+        </div>
+    @endforeach
     
 
 @endsection

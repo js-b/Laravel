@@ -15,7 +15,8 @@ class MainController extends Controller
         return view('about');
     }
     public function review(){
-        return view('review');
+        $reviews = new ContactModel();
+        return view('review',['reviews'=> $reviews->all()]);
     }
     public function review_check(Request $request) {
         $valid = $request->validate([
